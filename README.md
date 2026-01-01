@@ -100,7 +100,27 @@ run_live.bat
 - Requires confirmation before running
 
 ### Excel Workbook
-- **File Location**: `C:\Users\tjschol\OneDrive - Walmart Inc\1. EDF\FY26 EDF Data_v.3.1.xlsx`
+
+**Two-Copy System:**
+
+1. **Local Working Copy** (Primary)
+   - **Location**: `C:\Users\tjschol\Documents\edf-email-automation\FY26 EDF Data_v.3.1.xlsx`
+   - **Purpose**: Fast access, direct updates, working copy
+   - **Updated**: Every time automation runs
+
+2. **OneDrive Backup Copy** (Remote Access)
+   - **Location**: `C:\Users\tjschol\OneDrive - Walmart Inc\1. EDF\FY26 EDF Data_v.3.1.xlsx`
+   - **Purpose**: Cloud backup, remote access from any device
+   - **Synced**: Automatically after local file is updated
+   - **Usage**: Access from anywhere via OneDrive
+
+**How It Works:**
+- When you run the automation, it updates the LOCAL copy first
+- After saving locally, it automatically copies the file to OneDrive
+- If OneDrive is unavailable, the LOCAL copy still updates (no errors)
+- You can always access the latest version from either location
+
+**Worksheet Details:**
 - **Worksheet**: "Daily Data"
 - **Column A**: Date (automatically added from email subject)
 - **Columns B+**: Data from email tables
